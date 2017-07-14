@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    android:background="#2B6E78"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="com.peter.zensleepfree.Activity.SleepResultActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/relativeLayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning"
+                    android:id="@+id/result_title"
+                    android:layout_centerInParent="true"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_save_result"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="16dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/background_dark"
+                android:alpha="0.5"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/feel_container">
+
+                <RadioGroup
+                    android:id="@+id/radio_result"
+                    android:layout_width="320dp"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/text_feel"
+                    android:layout_marginTop="24dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@xml/mood_5_selector"
+                        android:id="@+id/radioButton"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/radioButton2"
+                        android:background="@xml/mood_4_selector"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/radioButton3"
+                        android:background="@xml/mood_3_selector"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/radioButton4"
+                        android:background="@xml/mood_2_selector"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/radioButton5"
+                        android:background="@xml/mood_1_selector"
+                        android:button="@android:color/transparent"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="How do you feel?"
+                    android:id="@+id/text_feel"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feel_container"
+                android:id="@+id/dream_container">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="How was your dream?"
+                    android:id="@+id/text_result_dream"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp" />
+
+                <RelativeLayout
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_result_dream"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:id="@+id/btn_result_pleasant"
+                        android:src="@drawable/pleasant"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/btn_result_neutral" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/btn_check_pleasant"
+                        android:layout_alignTop="@+id/btn_result_pleasant"
+                        android:src="@drawable/g_check"
+                        android:layout_alignRight="@+id/btn_result_pleasant"
+                        android:layout_marginTop="12dp"
+                        android:alpha="0"/>
+
+                    <ImageView
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:id="@+id/btn_result_neutral"
+                        android:src="@drawable/neutral"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/btn_check_neutral"
+                        android:src="@drawable/g_check"
+                        android:alpha="0"
+                        android:layout_alignTop="@+id/btn_result_neutral"
+                        android:layout_alignRight="@+id/btn_result_neutral"
+                        android:layout_marginTop="12dp" />
+
+                    <ImageView
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:id="@+id/btn_result_bad"
+                        android:src="@drawable/bad"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/btn_result_neutral" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/btn_check_bad"
+                        android:src="@drawable/g_check"
+                        android:alpha="0"
+                        android:layout_marginTop="12dp"
+                        android:layout_alignTop="@+id/btn_result_bad"
+                        android:layout_alignRight="@+id/btn_result_bad" />
+
+                    <TextView
+                        android:layout_width="92dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="pleasant"
+                        android:id="@+id/text_result_pleasant"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignLeft="@+id/btn_result_pleasant"
+                        android:layout_alignStart="@+id/btn_result_pleasant"
+                        android:layout_alignRight="@+id/btn_result_pleasant"
+                        android:layout_below="@+id/btn_result_pleasant"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="92dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="neutral"
+                        android:id="@+id/text_result_neutral"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/btn_result_neutral"
+                        android:layout_alignLeft="@+id/btn_result_neutral" />
+
+                    <TextView
+                        android:layout_width="92dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="bad"
+                        android:id="@+id/text_result_bad"
+                        android:layout_below="@+id/btn_result_bad"
+                        android:layout_alignLeft="@+id/btn_result_bad"
+                        android:gravity="center_horizontal" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_result_note"
+                android:layout_below="@+id/dream_container"
+                android:layout_marginTop="24dp"
+                android:hint="Add a dream note"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/background_dark"
+                android:textColorHint="@android:color/background_dark"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:drawableLeft="@drawable/add"
+                android:paddingBottom="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_below="@+id/edit_result_note"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="35%"
+                    android:id="@+id/text_result_efficienty"
+                    android:textSize="28sp"
+                    android:textColor="@android:color/black"
+                    android:layout_centerInParent="true" />
+
+                <at.grabner.circleprogress.CircleProgressView
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:layout_centerInParent="true"
+                    CircleProgressView:cpv_value="10"
+                    CircleProgressView:cpv_maxValue="100"
+                    CircleProgressView:cpv_barColor="@android:color/holo_green_dark"
+                    CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                    CircleProgressView:cpv_textColor="@android:color/black"
+                    CircleProgressView:cpv_unitColor="@android:color/black"
+                    CircleProgressView:cpv_spinColor="@android:color/black"
+                    CircleProgressView:cpv_barWidth="35dp"
+                    CircleProgressView:cpv_rimWidth="35dp"
+                    CircleProgressView:cpv_contourSize="0dp"
+                    CircleProgressView:cpv_textSize="0sp"
+                    CircleProgressView:cpv_seekMode="false"
+                    android:id="@+id/result_efficienty" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

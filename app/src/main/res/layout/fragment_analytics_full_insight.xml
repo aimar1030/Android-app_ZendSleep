@@ -1,0 +1,453 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    tools:context="com.peter.zensleepfree.Fragments.AnalyticsFullInsightFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/analytics_insight_all_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top"
+        android:background="#cccccc">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#2F283A"
+            android:id="@+id/analytics_insight_title_containter">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="#2F283A"
+                android:textSize="18sp"
+                android:text="Insights Stats"
+                android:id="@+id/text_analytics_insight_title"
+                android:layout_centerInParent="true"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/btn_analytics_dream"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/dream"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+        </RelativeLayout>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="1/2 NIGHTS"
+            android:id="@+id/text_analytics_insight_nights"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/analytics_insight_title_containter"
+            android:layout_marginTop="12dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:text="AVERAGE SLEEP DURATION"
+            android:id="@+id/text_analytics_insight_avg_sleep_duration"
+            android:layout_below="@+id/text_analytics_insight_nights"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/textView10"
+            android:layout_below="@+id/text_analytics_insight_avg_sleep_duration"
+            android:background="#333333"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:id="@+id/content_container"
+            android:background="#eeeeee">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/content_1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/content_2"
+                android:gravity="center_vertical"
+                android:background="#aaaaaa">
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="SLEEPED AVERAGE"
+                    android:id="@+id/text_analytics_insight_sleeped_avg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:text="1h 20min"
+                    android:id="@+id/text_analytics_insight_sleeped_avg_value"
+                    android:layout_below="@+id/text_analytics_insight_sleeped_avg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="0h 0min"
+                    android:id="@+id/text_analytics_insight_updated_sleeped_avg"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_below="@+id/text_analytics_insight_sleeped_avg_value"
+                    android:padding="4dp"
+                    android:background="#184B5F"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_analytics_insight_status_1"
+                    android:src="@drawable/status1_work"
+                    android:layout_alignTop="@+id/text_analytics_insight_updated_sleeped_avg"
+                    android:layout_alignBottom="@+id/text_analytics_insight_updated_sleeped_avg"
+                    android:layout_toRightOf="@+id/text_analytics_insight_updated_sleeped_avg"
+                    android:layout_marginLeft="4dp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_analytics_insight_status_2"
+                    android:src="@drawable/status2_stre"
+                    android:layout_alignTop="@+id/image_analytics_insight_status_1"
+                    android:layout_alignBottom="@+id/image_analytics_insight_status_1"
+                    android:layout_toRightOf="@+id/image_analytics_insight_status_1"
+                    android:layout_marginLeft="4dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_analytics_insight_status_3"
+                    android:src="@drawable/status3_bed"
+                    android:layout_alignTop="@+id/image_analytics_insight_status_1"
+                    android:layout_alignBottom="@+id/image_analytics_insight_status_1"
+                    android:layout_toRightOf="@+id/image_analytics_insight_status_2"
+                    android:layout_marginLeft="4dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_analytics_insight_status_4"
+                    android:src="@drawable/status4_caff"
+                    android:layout_alignTop="@+id/image_analytics_insight_status_3"
+                    android:layout_alignBottom="@+id/image_analytics_insight_status_3"
+                    android:layout_toRightOf="@+id/image_analytics_insight_status_3"
+                    android:layout_marginLeft="4dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_analytics_insight_status_5"
+                    android:src="@drawable/status5_meal"
+                    android:layout_alignTop="@+id/image_analytics_insight_status_4"
+                    android:layout_alignBottom="@+id/image_analytics_insight_status_4"
+                    android:layout_toRightOf="@+id/image_analytics_insight_status_4"
+                    android:layout_marginLeft="4dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_analytics_insight_status_6"
+                    android:src="@drawable/status6_alco"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignTop="@+id/image_analytics_insight_status_5"
+                    android:layout_alignBottom="@+id/image_analytics_insight_status_5"
+                    android:layout_toRightOf="@+id/image_analytics_insight_status_5"
+                    android:layout_marginLeft="4dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/content_2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentBottom="false">
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:text="TOTAL AVERAGE"
+                    android:id="@+id/text_analytics_insight_total_avg"
+                    android:layout_centerHorizontal="true"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:text="1h 24min"
+                    android:id="@+id/text_analytics_insight_total_avg_value"
+                    android:layout_below="@+id/text_analytics_insight_total_avg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    font:customFont="Gotham-Light.ttf"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:text="AVERAGE SLEEP EFFICIENCY"
+            android:id="@+id/text_analytics_insight_avg_efficiency"
+            android:layout_below="@+id/content_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_below="@+id/text_analytics_insight_avg_efficiency"
+            android:id="@+id/efficiency_container"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textSize="12sp"
+                android:text="SELECTED\nAVERAGE:"
+                android:id="@+id/text_analytics_insight_sleeped_averg"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textSize="12sp"
+                android:text="0.0%"
+                android:background="#00B2B3"
+                android:id="@+id/text_analytics_insight_sleep_updated_efficiency"
+                android:padding="6dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/text_analytics_insight_sleeped_averg"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/image_analytics_insight_efficiency_status_1"
+                android:src="@drawable/status1_work"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/text_analytics_insight_sleep_updated_efficiency"
+                android:layout_marginLeft="4dp" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/image_analytics_insight_efficiency_status_2"
+                android:src="@drawable/status2_stre"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/image_analytics_insight_efficiency_status_1"
+                android:layout_marginLeft="4dp" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/image_analytics_insight_efficiency_status_3"
+                android:src="@drawable/status3_bed"
+                android:layout_toRightOf="@+id/image_analytics_insight_efficiency_status_2"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/image_analytics_insight_efficiency_status_4"
+                android:src="@drawable/status4_caff"
+                android:layout_toRightOf="@+id/image_analytics_insight_efficiency_status_3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/image_analytics_insight_efficiency_status_5"
+                android:src="@drawable/status5_meal"
+                android:layout_toRightOf="@+id/image_analytics_insight_efficiency_status_4"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/image_analytics_insight_efficiency_status_6"
+                android:src="@drawable/status6_alco"
+                android:layout_toRightOf="@+id/image_analytics_insight_efficiency_status_5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/efficiency_container"
+            android:layout_above="@+id/analytics_insight_button_container"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+            <at.grabner.circleprogress.CircleProgressView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                CircleProgressView:cpv_value="10"
+                CircleProgressView:cpv_maxValue="100"
+                CircleProgressView:cpv_barColor="@android:color/holo_green_dark"
+                CircleProgressView:cpv_rimColor="#bbbbbb"
+                CircleProgressView:cpv_textColor="@android:color/black"
+                CircleProgressView:cpv_unitColor="@android:color/black"
+                CircleProgressView:cpv_spinColor="@android:color/black"
+                CircleProgressView:cpv_barWidth="18dp"
+                CircleProgressView:cpv_rimWidth="18dp"
+                CircleProgressView:cpv_contourSize="0dp"
+                CircleProgressView:cpv_textSize="0sp"
+                CircleProgressView:cpv_seekMode="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_centerInParent="true"
+                android:id="@+id/progress_analytics_insight_total_avg_efficiency" />
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="49%"
+                android:id="@+id/text_analytics_insight_total_efficiency_progress_value"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="@android:color/black"
+                android:text="TOTAL AVERAGE"
+                android:id="@+id/text_analytics_insight_total_avg_efficiency"
+                android:layout_above="@+id/text_analytics_insight_total_efficiency_progress_value"
+                android:layout_centerHorizontal="true"
+                font:customFont="Gotham-Light.ttf"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#bbbbbb"
+            android:id="@+id/analytics_insight_button_container">
+            <Button
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_analytics_insight_status_1"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_analytics_insight_status_2"
+                android:background="@xml/status_1_selector"
+                android:layout_marginRight="4dp" />
+
+            <Button
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_analytics_insight_status_2"
+                android:background="@xml/status_2_selector"
+                android:layout_toLeftOf="@+id/btn_analytics_insight_status_3"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp" />
+
+            <Button
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_analytics_insight_status_3"
+                android:background="@xml/status_3_selector"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView4"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="64dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/textView4"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_analytics_insight_status_4"
+                android:background="@xml/status_4_selector"
+                android:layout_toRightOf="@+id/textView4"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+
+            <Button
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_analytics_insight_status_5"
+                android:background="@xml/status_5_selector"
+                android:layout_toRightOf="@+id/btn_analytics_insight_status_4"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp" />
+
+            <Button
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/btn_analytics_insight_status_6"
+                android:background="@xml/status_6_selector"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btn_analytics_insight_status_5"
+                android:layout_marginLeft="4dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/note_header_container"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/darker_gray">
+
+    <RelativeLayout
+        android:id="@+id/note_header_sub_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="June 2016"
+            android:id="@+id/text_result_row_header_month"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="8dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="36%"
+            android:id="@+id/text_result_row_header_efficienty"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/white"
+            android:background="@xml/efficienty_background"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="3 nights"
+            android:id="@+id/text_result_row_header_nights"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/text_result_row_header_efficienty"
+            android:layout_toStartOf="@+id/text_result_row_header_efficienty"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="8dp"
+            font:customFont="Gotham-Light.ttf"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/note_header_sub_container"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:text="100%"
+            android:id="@+id/note_row_header_efficienty"
+            android:background="@drawable/circle_background"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Thursday, Jun 16"
+            android:id="@+id/note_row_header_date"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@+id/note_row_header_efficienty"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="3:25 PM | 1h 30min"
+            android:textColor="@android:color/black"
+            android:id="@+id/note_row_header_start_duration"
+            android:layout_alignBottom="@+id/note_row_header_efficienty"
+            android:layout_alignLeft="@+id/note_row_header_date"
+            android:layout_alignStart="@+id/note_row_header_date"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/note_row_header_status_img1"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/note_row_header_efficienty"
+            android:layout_toStartOf="@+id/note_row_header_efficienty"
+            android:layout_marginRight="4dp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/note_row_header_status_img2"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/note_row_header_status_img1" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/note_row_header_status_img3"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/note_row_header_status_img2"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/note_row_header_status_img4"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/note_row_header_status_img3"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/note_row_header_status_img5"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/note_row_header_status_img4"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/note_row_header_status_img6"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/note_row_header_status_img5"/>
+    </RelativeLayout>
+</RelativeLayout>

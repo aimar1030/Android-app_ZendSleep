@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/intro_4"
+    tools:context=".Fragments.Intros.Intro4Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btn_intro_4_close"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/close"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="36dp" />
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dream logs"
+            android:id="@+id/text_intro_4_title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="28dp"
+            android:textSize="18sp"
+            font:customFont="Gotham-Book.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discover how your sleep and daily habits affect your dreams. Record them in your dream log before you forget what you dreamed about."
+            android:id="@+id/text_intro_4_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="72dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            font:customFont="Gotham-Light.ttf"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+</FrameLayout>

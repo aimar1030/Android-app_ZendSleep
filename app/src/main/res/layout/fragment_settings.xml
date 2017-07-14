@@ -1,0 +1,454 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context="com.peter.zensleepfree.Fragments.SettingsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Settings"
+            android:id="@+id/setting_title"
+            android:textColor="@android:color/white"
+            android:background="#2F283A"
+            android:textSize="18sp"
+            android:gravity="center_horizontal|center_vertical"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView4"
+            android:layout_below="@+id/setting_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_fb_like">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView1"
+                        android:src="@drawable/fb_like"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like Us on Facebook"
+                        android:id="@+id/text_settings_like_fb"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_twitter_follow">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/twitter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Follow Us on Twitter"
+                        android:id="@+id/text_settings_follow_twitter"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_instagram_follow">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/instagram"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Follow Us on Instagram"
+                        android:id="@+id/text_settings_follow_instagram"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/help"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tips Screen"
+                        android:id="@+id/text_settings_tips"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView4"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/switch_settings_tips"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_feedback">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/email"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send Feedback"
+                        android:id="@+id/text_settings_feedback"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_social_sharing">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView6"
+                        android:src="@drawable/social_share"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Social Sharing"
+                        android:id="@+id/text_settings_social_share"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView6"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_help">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView7"
+                        android:src="@drawable/help"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Help"
+                        android:id="@+id/text_settings_help"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView7"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_unlock">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView8"
+                        android:src="@drawable/unlock"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upgrade to Premium"
+                        android:id="@+id/text_settings_unlock"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView8"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <!--<com.peter.zensleepfree.CustomView.FontTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/text_settings_unlocked_all"-->
+                        <!--android:textColor="#f04b5f"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:text="UNLOCKED"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--font:customFont="Gotham-Light.ttf"/>-->
+                </RelativeLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                    <!--android:background="#cccccc" />-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="16dp"-->
+                    <!--android:id="@+id/btn_settings_restore">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/imageView9"-->
+                        <!--android:src="@drawable/restore"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true" />-->
+
+                    <!--<com.peter.zensleepfree.CustomView.FontTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Restore Purchases"-->
+                        <!--android:id="@+id/text_settings_restore"-->
+                        <!--android:textColor="@android:color/black"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:layout_toRightOf="@+id/imageView9"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="16dp"-->
+                        <!--font:customFont="Gotham-Light.ttf"/>-->
+                <!--</RelativeLayout>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_forums">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView10"
+                        android:src="@drawable/forum"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Forums"
+                        android:id="@+id/text_settings_forum"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView10"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:background="#cccccc" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/btn_settings_more_app">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView11"
+                        android:src="@drawable/more_app"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:tint="#00B2B3"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More Apps"
+                        android:id="@+id/text_settings_more"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/imageView11"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="16dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                    <!--android:background="#cccccc" />-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="16dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/imageView12"-->
+                        <!--android:src="@drawable/drive_sync"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true" />-->
+
+                    <!--<com.peter.zensleepfree.CustomView.FontTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Google Sync"-->
+                        <!--android:id="@+id/text_settings_drive_sync"-->
+                        <!--android:textColor="@android:color/black"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:layout_toRightOf="@+id/imageView12"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="16dp"-->
+                        <!--font:customFont="Gotham-Light.ttf"/>-->
+
+                    <!--<Switch-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/switch_settings_drive_sync"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:checked="false" />-->
+                <!--</RelativeLayout>-->
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

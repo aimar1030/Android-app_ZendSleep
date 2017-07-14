@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/intro_bg"
+    tools:context="com.peter.zensleepfree.Fragments.Intros.Intro1Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btn_intro_1_close"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/close"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="36dp" />
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep Smarter"
+            android:id="@+id/text_intro_1_title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:textSize="18sp"
+            font:customFont="Gotham-Book.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="With Zen Labs Fitness"
+            android:id="@+id/text_intro_1_title_2"
+            android:layout_below="@+id/text_intro_1_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feel rested.\nImprove your sleep efficiently. Yes, you can actually get better at sleeping."
+            android:id="@+id/text_intro_1_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="72dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            font:customFont="Gotham-Light.ttf"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/intro_1_imageview"
+            android:layout_alignParentTop="false"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="64dp"
+            android:layout_marginRight="64dp" />
+    </RelativeLayout>
+</FrameLayout>

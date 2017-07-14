@@ -1,0 +1,456 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SleepDetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:background="#2F283A"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday, June 16, 2016"
+                android:id="@+id/sleep_detail_title"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/btn_sleep_detail_calendar"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/calendar"
+                android:layout_marginLeft="12dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/btn_sleep_detail_share"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/share"
+                android:layout_marginRight="12dp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView3"
+            android:fillViewport="false"
+            android:background="@android:color/white"
+            android:layout_below="@+id/title">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/imageView2"
+                        android:src="@drawable/bed"
+                        android:tint="@android:color/background_dark"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        android:text="3:20 PM - 4:55 PM"
+                        android:id="@+id/sleep_detail_duration"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                </RelativeLayout>
+
+                <com.peter.zensleepfree.CustomView.SleepDetailGraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:id="@+id/sleep_detail_graph">
+                </com.peter.zensleepfree.CustomView.SleepDetailGraphView>
+
+                <com.peter.zensleepfree.CustomView.SleepDetailGraphTimeLineView
+                    android:id="@+id/sleep_detail_time_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#cccccc">
+
+                </com.peter.zensleepfree.CustomView.SleepDetailGraphTimeLineView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:background="#cccccc"
+                    android:padding="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <at.grabner.circleprogress.CircleProgressView
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/sleep_detail_awake"
+                            CircleProgressView:cpv_value="10"
+                            CircleProgressView:cpv_maxValue="100"
+                            CircleProgressView:cpv_barColor="#F9B614"
+                            CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                            CircleProgressView:cpv_textColor="@android:color/black"
+                            CircleProgressView:cpv_unitColor="@android:color/black"
+                            CircleProgressView:cpv_spinColor="@android:color/black"
+                            CircleProgressView:cpv_barWidth="8dp"
+                            CircleProgressView:cpv_rimWidth="8dp"
+                            CircleProgressView:cpv_contourSize="0dp"
+                            CircleProgressView:cpv_textSize="0sp"
+                            CircleProgressView:cpv_seekMode="false"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AWAKE"
+                            android:id="@+id/text_sleep_detail_awake"
+                            android:layout_alignParentTop="false"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentEnd="false"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:layout_alignTop="@+id/sleep_detail_awake"
+                            android:layout_toRightOf="@+id/sleep_detail_awake"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="0h 15min"
+                            android:id="@+id/text_sleep_detail_awake_duration"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentEnd="false"
+                            android:textColor="@android:color/black"
+                            android:layout_alignBottom="@+id/sleep_detail_awake"
+                            android:layout_toRightOf="@+id/sleep_detail_awake"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textColor="@android:color/black"
+                            android:text="10%"
+                            android:id="@+id/text_sleep_detail_awake_efficienty"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="20dp"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <at.grabner.circleprogress.CircleProgressView
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/sleep_detail_light_sleep"
+                            CircleProgressView:cpv_value="10"
+                            CircleProgressView:cpv_maxValue="100"
+                            CircleProgressView:cpv_barColor="#3F51B5"
+                            CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                            CircleProgressView:cpv_textColor="@android:color/black"
+                            CircleProgressView:cpv_unitColor="@android:color/black"
+                            CircleProgressView:cpv_spinColor="@android:color/black"
+                            CircleProgressView:cpv_barWidth="8dp"
+                            CircleProgressView:cpv_rimWidth="8dp"
+                            CircleProgressView:cpv_contourSize="0dp"
+                            CircleProgressView:cpv_textSize="0sp"
+                            CircleProgressView:cpv_seekMode="false"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="LIGHT SLEEP"
+                            android:id="@+id/text_sleep_detail_light"
+                            android:layout_alignParentTop="false"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentEnd="false"
+                            android:textColor="@android:color/black"
+                            android:layout_alignTop="@+id/sleep_detail_light_sleep"
+                            android:layout_toRightOf="@+id/sleep_detail_light_sleep"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="0h 15min"
+                            android:id="@+id/text_sleep_detail_light_duration"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentEnd="false"
+                            android:textColor="@android:color/black"
+                            android:layout_toRightOf="@+id/sleep_detail_light_sleep"
+                            android:layout_alignBottom="@+id/sleep_detail_light_sleep"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textColor="@android:color/black"
+                            android:text="10%"
+                            android:id="@+id/text_sleep_detail_light_efficienty"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="20dp"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <at.grabner.circleprogress.CircleProgressView
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:id="@+id/sleep_detail_deep_sleep"
+                            CircleProgressView:cpv_value="10"
+                            CircleProgressView:cpv_maxValue="100"
+                            CircleProgressView:cpv_barColor="#771661"
+                            CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                            CircleProgressView:cpv_textColor="@android:color/black"
+                            CircleProgressView:cpv_unitColor="@android:color/black"
+                            CircleProgressView:cpv_spinColor="@android:color/black"
+                            CircleProgressView:cpv_barWidth="8dp"
+                            CircleProgressView:cpv_rimWidth="8dp"
+                            CircleProgressView:cpv_contourSize="0dp"
+                            CircleProgressView:cpv_textSize="0sp"
+                            CircleProgressView:cpv_seekMode="false"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true" />
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="DEEP SLEEP"
+                            android:id="@+id/text_sleep_detail_deep"
+                            android:layout_alignParentTop="false"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentEnd="false"
+                            android:textColor="@android:color/black"
+                            android:layout_toRightOf="@+id/sleep_detail_deep_sleep"
+                            android:layout_alignTop="@+id/sleep_detail_deep_sleep"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="0h 15min"
+                            android:id="@+id/text_sleep_deail_deep_duration"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentRight="false"
+                            android:layout_alignParentEnd="false"
+                            android:textColor="@android:color/black"
+                            android:layout_alignBottom="@+id/sleep_detail_deep_sleep"
+                            android:layout_toRightOf="@+id/sleep_detail_deep_sleep"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textColor="@android:color/black"
+                            android:text="10%"
+                            android:id="@+id/text_sleep_detail_deep_efficienty"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="20dp"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee">
+
+                    <Button
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/sleep_detail_status_1"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/sleep_detail_status_2"
+                        android:background="@xml/status_1_selector"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/sleep_detail_status_2"
+                        android:background="@xml/status_2_selector"
+                        android:layout_toLeftOf="@+id/sleep_detail_status_3"
+                        android:layout_centerVertical="true"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/sleep_detail_status_3"
+                        android:background="@xml/status_3_selector"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView4"
+                        android:enabled="false"/>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="64dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Medium Text"
+                        android:id="@+id/textView4"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/sleep_detail_status_4"
+                        android:background="@xml/status_4_selector"
+                        android:layout_toRightOf="@+id/textView4"
+                        android:layout_centerVertical="true"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/sleep_detail_status_5"
+                        android:background="@xml/status_5_selector"
+                        android:layout_toRightOf="@+id/sleep_detail_status_4"
+                        android:layout_centerVertical="true"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/sleep_detail_status_6"
+                        android:background="@xml/status_6_selector"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/sleep_detail_status_5"
+                        android:enabled="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#cccccc">
+
+                    <at.grabner.circleprogress.CircleProgressView
+                        android:layout_width="144dp"
+                        android:layout_height="144dp"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/sleep_detail_efficienty"
+                        CircleProgressView:cpv_value="10"
+                        CircleProgressView:cpv_maxValue="100"
+                        CircleProgressView:cpv_barColor="@android:color/holo_green_dark"
+                        CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                        CircleProgressView:cpv_textColor="@android:color/black"
+                        CircleProgressView:cpv_unitColor="@android:color/black"
+                        CircleProgressView:cpv_spinColor="@android:color/black"
+                        CircleProgressView:cpv_barWidth="16dp"
+                        CircleProgressView:cpv_rimWidth="16dp"
+                        CircleProgressView:cpv_contourSize="0dp"
+                        CircleProgressView:cpv_textSize="0sp"
+                        CircleProgressView:cpv_seekMode="false"/>
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/sleep_detail_mood"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/sleep_detail_efficienty"
+                        android:layout_marginRight="16dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/sleep_detail_dream"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/sleep_detail_efficienty"
+                        android:layout_marginLeft="16dp" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="35%"
+                        android:id="@+id/text_sleep_detail_efficienty"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/black"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sleep_detail_dream_note"
+                    android:hint="Add a dream note"
+                    android:drawableLeft="@drawable/add"
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/background_dark"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

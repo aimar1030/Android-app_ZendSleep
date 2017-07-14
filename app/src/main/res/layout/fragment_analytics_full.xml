@@ -1,0 +1,181 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    tools:context="com.peter.zensleepfree.Fragments.AnalyticsFullFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Your dream in 50% of nights"
+            android:id="@+id/text_analytics_full_title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/btn_analytics_insight"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/stats"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp" />
+
+        <LinearLayout
+            android:id="@+id/analytics_insight_full_dream_container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btn_analytics_insight">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/btn_analytics_caffeine"
+                    android:background="@xml/caffeine_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/btn_analytics_worked_out"
+                    android:background="@xml/workout_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/btn_analytics_caffeine"
+                    android:layout_marginBottom="16dp" />
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="48dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/text_analytics_pleasant_progress"
+                    android:layout_above="@+id/btn_analytics_worked_out"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/holo_green_dark"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="100%"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/image_analytics_pleasant"
+                    android:layout_above="@+id/text_analytics_pleasant_progress"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pleasant"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/btn_analytics_stress"
+                    android:background="@xml/stress_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/btn_analytics_missed_meal"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/btn_analytics_missed_meal"
+                    android:background="@xml/meal_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="24dp" />
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="48dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/text_analytics_neutral_progress"
+                    android:layout_above="@+id/btn_analytics_stress"
+                    android:layout_centerHorizontal="true"
+                    android:background="#FDB914"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="100%"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/image_analytics_neutral"
+                    android:layout_above="@+id/text_analytics_neutral_progress"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/neutral"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/btn_analytics_not_my_bed"
+                    android:background="@xml/notmybed_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/btn_analytics_alcohol"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/btn_analytics_alcohol"
+                    android:background="@xml/alcohol_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="24dp" />
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="48dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/text_analytics_bad_progress"
+                    android:layout_above="@+id/btn_analytics_not_my_bed"
+                    android:layout_centerHorizontal="true"
+                    android:background="#F04B5F"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="100%"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:id="@+id/image_analytics_bad"
+                    android:layout_above="@+id/text_analytics_bad_progress"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bad"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

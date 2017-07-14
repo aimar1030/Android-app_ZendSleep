@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="#dddddd">
+
+    <com.peter.zensleepfree.CustomView.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Awake"
+        android:id="@+id/row_text_alarm_name"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        font:customFont="Gotham-Light.ttf"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_radio_sound"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="18dp"
+        android:checked="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+</RelativeLayout>

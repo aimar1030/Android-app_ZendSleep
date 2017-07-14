@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    tools:context="com.peter.zensleepfree.Fragments.AlarmRingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#2F283A">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alarm Settings"
+            android:id="@+id/alarm_sound_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/btn_save_sound"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="false"
+            android:src="@drawable/check"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back_to_settings"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/back"
+            android:layout_marginLeft="18dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView6"
+        android:layout_below="@+id/relativeLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#cccccc">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/list_sound_default"
+                android:layout_marginBottom="12dp" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="1700dp"
+                android:id="@+id/list_my_sound"
+                android:layout_weight="1"
+                android:layout_below="@+id/list_sound_default" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add My Sound"
+                android:id="@+id/btn_add_sound"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/list_my_sound"
+                android:layout_marginTop="12dp"
+                android:background="#dddddd"
+                android:textColor="#333333"
+                android:drawableLeft="@drawable/icon_lock"
+                android:paddingLeft="18dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

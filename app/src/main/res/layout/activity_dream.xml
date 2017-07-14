@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    tools:context=".Activity.DreamActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:background="#2F283A"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How was your dream?"
+            android:id="@+id/dream_detail_title"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/btn_dream_detail_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/back"
+            android:layout_marginLeft="12dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/btn_dream_detail_save"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/check"
+            android:layout_marginRight="12dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="16dp"
+        android:layout_above="@+id/edit_dream_note">
+
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:id="@+id/btn_dream_pleasant"
+            android:src="@drawable/pleasant"
+            android:layout_alignParentTop="false"
+            android:layout_toLeftOf="@+id/btn_dream_neutral"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btn_dream_check_pleasant"
+            android:layout_alignTop="@+id/btn_dream_pleasant"
+            android:src="@drawable/g_check"
+            android:layout_alignRight="@+id/btn_dream_pleasant"
+            android:layout_marginTop="12dp"
+            android:alpha="0"/>
+
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:id="@+id/btn_dream_neutral"
+            android:src="@drawable/neutral"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btn_dream_check_neutral"
+            android:src="@drawable/g_check"
+            android:alpha="0"
+            android:layout_alignTop="@+id/btn_dream_neutral"
+            android:layout_alignRight="@+id/btn_dream_neutral"
+            android:layout_marginTop="12dp" />
+
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:id="@+id/btn_dream_bad"
+            android:src="@drawable/bad"
+            android:layout_alignParentTop="false"
+            android:layout_toRightOf="@+id/btn_dream_neutral"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btn_dream_check_bad"
+            android:src="@drawable/g_check"
+            android:alpha="0"
+            android:layout_marginTop="12dp"
+            android:layout_alignTop="@+id/btn_dream_bad"
+            android:layout_alignRight="@+id/btn_dream_bad" />
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="pleasant"
+            android:textColor="@android:color/black"
+            android:id="@+id/text_dream_pleasant"
+            android:layout_alignParentBottom="false"
+            android:layout_alignLeft="@+id/btn_dream_pleasant"
+            android:layout_alignStart="@+id/btn_dream_pleasant"
+            android:layout_alignRight="@+id/btn_dream_pleasant"
+            android:layout_below="@+id/btn_dream_pleasant"
+            android:gravity="center_horizontal"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="neutral"
+            android:textColor="@android:color/black"
+            android:id="@+id/text_dream_neutral"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/btn_dream_neutral"
+            android:layout_alignLeft="@+id/btn_dream_neutral"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="bad"
+            android:textColor="@android:color/black"
+            android:id="@+id/text_dream_bad"
+            android:layout_below="@+id/btn_dream_bad"
+            android:layout_alignLeft="@+id/btn_dream_bad"
+            android:gravity="center_horizontal"
+            font:customFont="Gotham-Light.ttf"/>
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_dream_note"
+        android:hint="Add a dream note"
+        android:drawableLeft="@drawable/add"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:paddingLeft="8dp"
+        android:paddingTop="16dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="16dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

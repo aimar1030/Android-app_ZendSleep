@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/upgradebg"
+    tools:context="com.peter.zensleepfree.Fragments.AnalyticsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analytics"
+            android:id="@+id/analytics_title"
+            android:textColor="@android:color/white"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textSize="20sp"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upgrade to Premium"
+            android:textAllCaps="false"
+            android:background="#dddddd"
+            android:textColor="#222222"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:id="@+id/btn_upgrade"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unlock cool and useful Analytics features"
+            android:id="@+id/txt_unlock"
+            android:layout_above="@+id/btn_upgrade"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_below="@+id/analytics_title"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/upgrade"
+            android:layout_above="@+id/txt_unlock"
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+</FrameLayout>

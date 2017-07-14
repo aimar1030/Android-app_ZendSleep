@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#91cd42</color>
+
+    <color name="dark_gray_blue_menu_background_color">#2b3e42</color>
+    <color name="red_menu_color">#d84152</color>
+    <color name="turk_green_menu_color">#15aab0</color>
+    <color name="frog_green_menu_color">#b3d445</color>
+    <color name="blue_button_color">#02b1b4</color>
+</resources>

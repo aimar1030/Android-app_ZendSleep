@@ -1,0 +1,304 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    tools:context="com.peter.zensleepfree.Fragments.ShareFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DAD6CC"
+        android:id="@+id/share_container">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:padding="16dp"
+            android:background="#2F283A">
+
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Sharing"
+                android:id="@+id/textView3"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_finish_share"
+                android:src="@drawable/check"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_share_comment"
+            android:background="#E6E3DA"
+            android:hint="Add a comment"
+            android:drawableLeft="@drawable/add"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark"
+            android:paddingLeft="8dp"
+            android:paddingTop="16dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/imageView13"
+                android:src="@drawable/fb_like"
+                android:tint="#0067bf"/>
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:text="connect"
+                android:id="@+id/btn_share_fb_connect"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="#128e9e"
+                android:layout_centerVertical="true" />
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"
+                android:text="Facebook"
+                android:id="@+id/textView12"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView13" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/imageView14"
+                android:src="@drawable/twitter"
+                android:tint="#00afec"/>
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:text="connect"
+                android:id="@+id/btn_share_twitter_connect"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="#128e9e"
+                android:layout_centerVertical="true" />
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"
+                android:text="Twitter"
+                android:id="@+id/textView13"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/imageView15"
+                android:src="@drawable/instagram"
+                android:tint="#6b5747"/>
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:text="connect"
+                android:id="@+id/btn_share_insta_connect"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="#128e9e"
+                android:layout_centerVertical="true" />
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"
+                android:text="Instagram"
+                android:id="@+id/textView14"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"
+                android:text="Like us on Facebook"
+                android:id="@+id/textView8"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:text="like"
+                android:id="@+id/btn_share_fb_like"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="#15B1CF"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"
+                android:text="Follow us on Twitter"
+                android:id="@+id/textView9"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:text="follow"
+                android:id="@+id/btn_share_follow_twitter"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="#15B1CF"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"
+                android:text="Follow us on Instagram"
+                android:id="@+id/textView11"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:text="follow"
+                android:id="@+id/btn_share_follow_insta"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="#15B1CF"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tip_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.8"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout3"
+            android:padding="4dp">
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Thanks!"
+                android:id="@+id/btn_share_tip_thanks"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="#39be2b"/>
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Never show this"
+                android:id="@+id/btn_share_tip_never"
+                android:textColor="@android:color/white"
+                android:background="#f04b5f"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="false"/>
+        </RelativeLayout>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            font:customFont="Gotham-Book.ttf"
+            android:text="If you want a pre-filled text, just tap on the\ncursor and hit &quot;Paste&quot;."
+            android:id="@+id/textView15"
+            android:layout_below="@+id/relativeLayout3"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView12"
+            android:layout_below="@+id/textView15"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/share_tip"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</FrameLayout>

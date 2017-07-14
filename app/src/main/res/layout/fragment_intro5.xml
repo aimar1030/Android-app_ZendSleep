@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/intro_5"
+    tools:context="com.peter.zensleepfree.Fragments.Intros.Intro5Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btn_intro_5_close"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/close"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="36dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="28dp">
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Getting started "
+                android:id="@+id/text_intro_5_title_1"
+                android:textSize="18sp"
+                font:customFont="Gotham-Light.ttf"/>
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="is easy"
+                android:id="@+id/text_intro_5_title_2"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                font:customFont="Gotham-Book.ttf"/>
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="!"
+                android:id="@+id/text_intro_5_title_3"
+                font:customFont="Gotham-Light.ttf"/>
+        </LinearLayout>
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Just place your device on the bed and we'll do all the work."
+            android:id="@+id/text_intro_5_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="72dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            font:customFont="Gotham-Light.ttf"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start now >"
+            android:id="@+id/btn_start_now"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_marginRight="64dp"
+            android:textSize="24sp"
+            android:layout_marginTop="320dp" />
+    </RelativeLayout>
+
+</FrameLayout>

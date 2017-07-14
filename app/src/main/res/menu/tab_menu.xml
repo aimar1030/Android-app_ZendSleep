@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_sleep"
+        android:icon="@drawable/bed"
+        android:title="Sleep" />
+    <item
+        android:id="@+id/tab_notes"
+        android:icon="@drawable/notes"
+        android:title="Notes" />
+    <item
+        android:id="@+id/tab_analytics"
+        android:icon="@drawable/insights"
+        android:title="Analytics" />
+    <item
+        android:id="@+id/tab_stats"
+        android:icon="@drawable/stats"
+        android:title="Stats" />
+    <item
+        android:id="@+id/tab_settings"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+</menu>

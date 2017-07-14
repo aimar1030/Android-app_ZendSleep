@@ -1,0 +1,675 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context="com.peter.zensleepfree.Fragments.StatsFragment">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2F283A">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WEEK"
+                android:id="@+id/btn_state_week"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MONTH"
+                android:id="@+id/btn_state_month"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/btn_state_week"
+                android:layout_toEndOf="@+id/btn_state_week"
+                android:layout_weight="1"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YEAR"
+                android:id="@+id/btn_state_year"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/btn_state_overall"
+                android:layout_toStartOf="@+id/btn_state_overall"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:textSize="14sp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OVERALL"
+                android:id="@+id/btn_state_overall"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/duration_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/underline"
+            android:background="#dddddd">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="&lt;"
+                android:id="@+id/btn_state_older"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text=">"
+                android:id="@+id/btn_state_newer"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"/>
+
+            <com.peter.zensleepfree.CustomView.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Jul 2016"
+                android:id="@+id/text_state_current"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                font:customFont="Gotham-Light.ttf"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/underline"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/button_container"
+            android:background="#2F283A">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#eca813"
+                android:layout_alignParentBottom="true">
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="3dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="#eca813"
+                android:id="@+id/text_state_underline"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView5"
+        android:layout_below="@+id/header" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dddddd">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/state_values_container"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="8sp"
+                        android:textColor="#666666"
+                        android:text="TRACKED\nNIGHTS"
+                        android:id="@+id/text_state_tracked_night"
+                        android:gravity="center_horizontal"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="1"
+                        android:id="@+id/text_state_tracked_night_value"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="8sp"
+                        android:textColor="#666666"
+                        android:text="AVG.\nDURATION"
+                        android:id="@+id/text_state_avg_duration"
+                        android:gravity="center_horizontal"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="1h 29min"
+                        android:id="@+id/text_state_avg_duration_value"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="8sp"
+                        android:textColor="#666666"
+                        android:text="LONGEST NIGHT 16/06/2016"
+                        android:id="@+id/text_state_longest"
+                        android:gravity="center_horizontal"
+                        android:minLines="2"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="1h 29min"
+                        android:id="@+id/text_state_longest_value"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="8sp"
+                        android:textColor="#666666"
+                        android:text="SHORTEST NIGHT 16/06/2016"
+                        android:id="@+id/text_state_shortest"
+                        android:gravity="center_horizontal"
+                        android:minLines="2"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="1h 29min"
+                        android:id="@+id/text_state_shortest_value"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/state_values_container"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp"
+                android:visibility="gone"
+                android:id="@+id/progress_container">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <at.grabner.circleprogress.CircleProgressView
+                        android:layout_width="926dp"
+                        android:layout_height="92dp"
+                        android:id="@+id/state_avg_efficienty"
+                        CircleProgressView:cpv_value="10"
+                        CircleProgressView:cpv_maxValue="100"
+                        CircleProgressView:cpv_barColor="@android:color/holo_green_dark"
+                        CircleProgressView:cpv_rimColor="#cccccc"
+                        CircleProgressView:cpv_textColor="@android:color/black"
+                        CircleProgressView:cpv_unitColor="@android:color/black"
+                        CircleProgressView:cpv_spinColor="@android:color/black"
+                        CircleProgressView:cpv_barWidth="14dp"
+                        CircleProgressView:cpv_rimWidth="14dp"
+                        CircleProgressView:cpv_contourSize="0dp"
+                        CircleProgressView:cpv_textSize="0sp"
+                        CircleProgressView:cpv_seekMode="false"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="Average Efficiency"
+                        android:id="@+id/text_state_efficiecy"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/state_avg_efficienty"
+                        android:layout_centerVertical="true"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="24%"
+                        android:id="@+id/text_state_avg_efficiency_value"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="36dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <at.grabner.circleprogress.CircleProgressView
+                        android:layout_width="92dp"
+                        android:layout_height="92dp"
+                        android:id="@+id/state_time_sleeping"
+                        CircleProgressView:cpv_value="10"
+                        CircleProgressView:cpv_maxValue="100"
+                        CircleProgressView:cpv_barColor="@android:color/holo_green_dark"
+                        CircleProgressView:cpv_rimColor="#cccccc"
+                        CircleProgressView:cpv_textColor="@android:color/black"
+                        CircleProgressView:cpv_unitColor="@android:color/black"
+                        CircleProgressView:cpv_spinColor="@android:color/black"
+                        CircleProgressView:cpv_barWidth="14dp"
+                        CircleProgressView:cpv_rimWidth="14dp"
+                        CircleProgressView:cpv_contourSize="0dp"
+                        CircleProgressView:cpv_textSize="0sp"
+                        CircleProgressView:cpv_seekMode="false"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="Time Sleeping"
+                        android:id="@+id/text_state_time_sleeping"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/state_time_sleeping"
+                        android:layout_centerVertical="true"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="24%"
+                        android:id="@+id/text_sleeping_time_value"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="36dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/progress_container"
+                android:background="@android:color/white"
+                android:id="@+id/state_graph_container">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/state_action_dots_container"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:id="@+id/textView"
+                        android:background="@xml/circle_sleep_duration_background"
+                        android:layout_centerVertical="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="Sleep Duration"
+                        android:id="@+id/text_state_sleep_duration_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/textView"
+                        android:layout_marginLeft="8dp"
+                        font:customFont="Gotham-Light.ttf"/>
+
+                    <TextView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:id="@+id/textView5"
+                        android:background="@xml/circle_efficiency_good"
+                        android:layout_toRightOf="@+id/text_state_sleep_duration_circle"
+                        android:layout_marginLeft="16dp"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:id="@+id/textView6"
+                        android:background="@xml/circle_efficiency_normal"
+                        android:layout_toRightOf="@+id/textView5"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:id="@+id/textView7"
+                        android:background="@xml/circle_efficiency_bad"
+                        android:layout_toRightOf="@+id/textView6"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerVertical="true" />
+
+                    <com.peter.zensleepfree.CustomView.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:text="Sleep Efficiency"
+                        android:id="@+id/text_state_efficiency_circle"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/textView7"
+                        android:layout_marginLeft="8dp"
+                        font:customFont="Gotham-Light.ttf"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/state_action_dots_container"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <com.peter.zensleepfree.CustomView.StatsGraphView
+                        android:id="@+id/stats_graph_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/state_graph_container">
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:text="BED TIME"
+                    android:id="@+id/text_state_bed_time"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text_state_bed_time"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/state_date_info_6">
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:text="Jun 16"
+                            android:id="@+id/text_state_6_date"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"
+                            android:text="15:26"
+                            android:id="@+id/text_state_6_time"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/state_date_info_5">
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:text="Jun 24"
+                            android:id="@+id/text_state_5_date"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"
+                            android:text="10:09"
+                            android:id="@+id/text_state_5_time"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/state_date_info_4">
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:text="Jun 25"
+                            android:id="@+id/text_state_4_date"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"
+                            android:text="11:25"
+                            android:id="@+id/text_state_4_time"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/state_date_info_3">
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:text="Jun 27"
+                            android:id="@+id/text_state_3_date"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"
+                            android:text="10:08"
+                            android:id="@+id/text_state_3_time"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/state_date_info_2">
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:text="Jun 28"
+                            android:id="@+id/text_state_2_date"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"
+                            android:text="03:35"
+                            android:id="@+id/text_state_2_time"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/state_date_info_1">
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="12sp"
+                            android:text="Jun 30"
+                            android:id="@+id/text_state_1_date"
+                            font:customFont="Gotham-Light.ttf"/>
+
+                        <com.peter.zensleepfree.CustomView.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/black"
+                            android:text="15:48"
+                            android:id="@+id/text_state_1_time"
+                            font:customFont="Gotham-Light.ttf"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

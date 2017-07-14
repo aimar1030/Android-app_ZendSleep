@@ -1,0 +1,368 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="#aaaaaa"
+    tools:context="com.peter.zensleepfree.Fragments.AlarmSettingFragment">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#2F283A">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alarm Settings"
+            android:id="@+id/alarm_settings_title"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/btn_save"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="false"
+            android:src="@drawable/check"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/back"
+            android:layout_marginLeft="18dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="#aaaaaa">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Alarm"
+                    android:id="@+id/text_alarm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@android:color/background_dark"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switch_alarm"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:enabled="true"
+                    android:checked="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_volume_down"
+                    android:src="@drawable/volum_down"
+                    android:layout_marginBottom="24dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_below="@+id/text_alarm"
+                    android:layout_marginTop="24dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image_volume_up"
+                    android:src="@drawable/volum_up"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/text_alarm"
+                    android:layout_marginTop="24dp" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seek_volume"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/image_volume_down"
+                    android:layout_toLeftOf="@+id/image_volume_up"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignBottom="@+id/image_volume_down"
+                    android:layout_alignTop="@+id/image_volume_down"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:max="100"
+                    android:indeterminate="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dddddd">
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Alarm Sound"
+                    android:id="@+id/text_alarm_sound"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@android:color/background_dark"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Awake"
+                    android:id="@+id/text_selected_sound"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_alarm_sound"
+                    android:layout_marginLeft="24dp"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="8dp"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/next"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_smart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Smart Alarm"
+                    android:id="@+id/text_smart_alarm"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@android:color/background_dark"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switch_smart"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:enabled="true"
+                    android:checked="true" />
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="25 min"
+                    android:id="@+id/text_smart_alarm_value"
+                    android:textColor="#333333"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_below="@+id/text_smart_alarm"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/text_smart_alarm_min"
+                    android:src="@drawable/icon_lock"
+                    android:layout_marginLeft="24dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/text_smart_alarm_value"
+                    android:layout_marginBottom="24dp"/>
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="45 min"
+                    android:id="@+id/text_smart_alarm_max"
+                    android:textColor="#333333"
+                    android:layout_marginRight="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignTop="@+id/text_smart_alarm_min"
+                    font:customFont="Gotham-Light.ttf"
+                    android:layout_alignBottom="@+id/seek_smart_alarm"
+                    android:gravity="center_vertical" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seek_smart_alarm"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:indeterminate="false"
+                    android:max="40"
+                    android:layout_toRightOf="@+id/text_smart_alarm_min"
+                    android:layout_toLeftOf="@+id/text_smart_alarm_max"
+                    android:layout_alignTop="@+id/text_smart_alarm_min"
+                    android:layout_alignBottom="@+id/text_smart_alarm_min" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:background="#777777"
+                android:id="@+id/text_line_3" />
+
+            <RelativeLayout
+                android:id="@+id/layout_snooze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Snoozing"
+                    android:id="@+id/text_snoozing"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@android:color/background_dark"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switch_snoozing"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="24dp"
+                    android:enabled="true"
+                    android:checked="true" />
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="10 min"
+                    android:id="@+id/text_snooze_alarm_value"
+                    android:textColor="#333333"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_snoozing"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    font:customFont="Gotham-Light.ttf"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/text_snooze_alarm_min"
+                    android:src="@drawable/icon_lock"
+                    android:layout_below="@+id/text_snooze_alarm_value"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginBottom="24dp"/>
+
+                <com.peter.zensleepfree.CustomView.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="20 min"
+                    android:id="@+id/text_snooze_alarm_max"
+                    android:textColor="#333333"
+                    android:layout_marginRight="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/text_snooze_alarm_min"
+                    font:customFont="Gotham-Light.ttf"
+                    android:layout_alignBottom="@+id/seek_snoozing"
+                    android:gravity="center_vertical" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seek_snoozing"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:max="19"
+                    android:layout_alignTop="@+id/text_snooze_alarm_min"
+                    android:layout_toRightOf="@+id/text_snooze_alarm_min"
+                    android:layout_toLeftOf="@+id/text_snooze_alarm_max"
+                    android:layout_alignBottom="@+id/text_snooze_alarm_min" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

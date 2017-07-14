@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="#dddddd"
+    tools:context="com.peter.zensleepfree.Fragments.NotesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.peter.zensleepfree.CustomView.FontTextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Monthly Outlook"
+            android:id="@+id/notes_title"
+            android:textColor="@android:color/white"
+            android:background="#2F283A"
+            android:textSize="20sp"
+            android:gravity="center_horizontal|center_vertical"
+            font:customFont="Gotham-Light.ttf"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sleep_list_view"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/notes_title" />
+    </RelativeLayout>
+
+</FrameLayout>

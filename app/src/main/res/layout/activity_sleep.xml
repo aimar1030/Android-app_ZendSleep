@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.peter.zensleepfree.Activity.SleepActivity">
+
+    <com.peter.zensleepfree.CustomView.BubblingView
+        android:id="@+id/sleep_bubbling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.peter.zensleepfree.CustomView.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:id="@+id/btn_stop"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        font:customFont="Gotham-Thin.ttf"
+        android:layout_below="@+id/text_sleep_power_guide"
+        android:layout_marginTop="36dp" />
+
+    <com.peter.zensleepfree.CustomView.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:37"
+        android:id="@+id/text_current_time"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:textSize="64sp"
+        font:customFont="Gotham-Light.ttf"/>
+
+    <com.peter.zensleepfree.CustomView.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alarm 05:00 PM - 05:30 PM"
+        android:id="@+id/text_alarm_time"
+        android:layout_below="@+id/text_current_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textColor="#eca813"
+        font:customFont="Gotham-Light.ttf"/>
+
+    <ImageView
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:id="@+id/btn_flash"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/flash"
+        android:scaleType="fitXY"
+        android:layout_marginRight="48dp"
+        android:background="@xml/circle_background"
+        android:padding="16dp"/>
+
+    <ImageView
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:id="@+id/btn_dream"
+        android:layout_alignTop="@+id/btn_flash"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/dream"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="48dp"
+        android:background="@xml/circle_background"
+        android:padding="16dp"/>
+
+    <com.peter.zensleepfree.CustomView.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AM"
+        android:id="@+id/text_am_pm"
+        android:layout_alignBottom="@+id/text_current_time"
+        android:layout_toRightOf="@+id/text_current_time"
+        android:layout_toEndOf="@+id/text_current_time"
+        android:textSize="24sp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        font:customFont="Gotham-Light.ttf"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/sleep_activity_banner_ad"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="54dp"
+        android:id="@+id/power_animator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/power_00000"
+        android:layout_below="@+id/btn_flash" />
+
+    <com.peter.zensleepfree.CustomView.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Please keep your phone connected\nto a power source."
+        android:id="@+id/text_sleep_power_guide"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/power_animator"
+        font:customFont="Gotham-Light.ttf"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="soonze"
+        android:textSize="16sp"
+        android:id="@+id/btn_sleep_alarm_snooze"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/btn_flash" />
+
+</RelativeLayout>
